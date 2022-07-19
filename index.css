@@ -3,8 +3,12 @@ html {
     width: 1440px;
     height: 1080px;
     background: white;
-    border: 1px solid black;
     margin: auto;
+}
+
+#notificationSpace {
+    padding: 2%;
+    border: 1px solid black;
 }
 
 body {
@@ -12,11 +16,19 @@ body {
     padding: 10px;
 }
 
-#headerArea,
-#markAsRead {
+#headerArea {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+div#markAsRead {
+    color: #0072fa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 10%;
+    font-size: 16px;
 }
 
 .notificationItem {
@@ -24,6 +36,8 @@ body {
     align-items: center;
     height: 150px;
     flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
 #notificationArea {
@@ -34,11 +48,12 @@ body {
 
 .notificationItem:hover {
     color: #0072fa;
+    background-color: #f6f6f6;
     font-size: 16px;
 }
 
 .notificationTimeStamp {
-    color: #f6f6f6;
+    color: gray;
     font-size: 14px;
 }
 
@@ -47,4 +62,16 @@ body {
 .icon-tabler-mail {
     background-color: #3475dd;
     border-radius: 50%;
+}
+
+#viewAllNotifications {
+    color: #0072fa;
+}
+
+/* hover states */
+
+div#markAsRead:hover,
+#viewAllNotifications:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
